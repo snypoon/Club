@@ -1,0 +1,1413 @@
+//Fonts
+@font-face 
+    font-family: 'Gilroy-Medium'
+    src: url('../fonts/Gilroy-Medium.ttf')
+
+@font-face 
+    font-family: 'Gilroy-ExtraBold'
+    src: url('../fonts/Gilroy-ExtraBold.ttf')
+
+@font-face 
+    font-family: 'Gilroy-Regular'
+    src: url('../fonts/Gilroy-Regular.ttf')
+
+//adapt
+
+@mixin rwm($screen)
+   @media (min-width: $screen+'px')
+       @content;
+
+@mixin rwd($screen)
+   @media (max-width: $screen+'px')
+       @content;
+
+//Styles
+body
+    padding: 0
+    margin: 0
+
+.head
+    background: url('../img/head_bcg.png')
+    background-repeat: no-repeat
+    @include rwm(1488)
+        background-size: 100%
+        background-position: center center
+    @include rwd(1488)
+        background-size: auto
+    @include rwd(1100)
+        max-height: 555px
+    @include rwd(454)
+        padding-bottom: 40px
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 52px 0 160px 0
+    .offer
+        @include rwd(454)
+            align-self: flex-start
+            padding-left: 14px
+    .logo
+        width: 137px
+        height: 41px
+    h1
+        margin-bottom: 0
+        font-family: 'Gilroy-ExtraBold'
+        color: white
+        @include rwm(1100)
+            margin-top: 220px
+            font-size: 58px
+            text-align: center
+            line-height: 71px
+        @include rwd(1100)
+            margin-top: 180px
+            font-size: 40px
+            text-align: left
+            line-height: 50px
+        @include rwd(454)
+            font-size: 30px
+            line-height: 30px
+        
+    h5  
+        font-family: 'Gilroy-Regular'
+        font-size: 24px
+        color: white
+        text-align: center
+        font-weight: normal
+        margin-top: 55px
+        margin-bottom: 0
+        @include rwd(1100)
+            display: none
+    .button
+        @include rwm(1100)
+            margin-top: 100px
+        @include rwd(1100)
+            margin-top: 89px
+            margin-bottom: 89px
+        @include rwd(454)
+            margin-top: 69px
+            margin-bottom: 36px
+
+.community_adapt
+    @include rwm(1100)
+        display: none
+    h2
+        font-family: 'Gilroy-Regular'
+        font-weight: normal
+        font-size: 20px
+        text-align: center
+        color: white
+        @include rwd(454)
+            font-size: 14px
+    h4
+        font-family: 'Gilroy-ExtraBold'
+        font-size: 20px
+        text-align: center
+        color: white
+        @include rwd(454)
+            font-size: 18px
+
+.community
+    padding: 50px 0 80px 0
+    @include rwd(1100)
+        display: none
+    h5
+        font-family: 'Gilroy-Regular'
+        font-size: 24px
+        text-align: center
+        color: black
+        font-weight: normal
+        margin-bottom: 0
+        margin-top: 0
+    h3
+        font-family: 'Gilroy-ExtraBold'
+        font-size: 24px
+        margin-top: 45px
+        margin-bottom: 0
+        text-align: center
+
+.opportunities_wrap
+    @include rwd(1100)
+        padding: 50px 0 0 0
+    @include rwm(1100)
+        padding: 50px 0 96px 0
+    width: 100%
+    background-image: url('../img/47bcg.png')
+    background-repeat: repeat-x
+    background-size: auto 47%
+    display: flex
+    flex-direction: column
+    align-items: center
+    h1
+        font-family: 'Gilroy-ExtraBold'
+        font-size: 31px
+        @include rwd(1100)
+            font-size: 29px
+        @include rwm(1100)
+            font-size: 31px
+        text-align: center
+        margin: 0
+    .opp_slider
+        margin-top: 40px
+        @include rwm(1100)
+            display: none !important
+        .owl-item
+            div
+                display: flex
+                justify-content: center
+        .owl-dots
+            display: flex
+            justify-content: center
+        .owl-dot
+            height: 10px
+            width: 10px
+            background: #E18370
+            opacity: 0.4
+            border-radius: 5px
+            margin: 8px
+        .owl-dot.active
+            opacity: 1
+        .opportunity
+                display: flex
+                flex-direction: column
+                max-width: 340px
+                height: 250px
+                margin: 0 10px 0 10px
+                .op_head
+                    font-family: 'Gilroy-ExtraBold'
+                    font-size: 20px
+                    text-align: center
+                    z-index: 999
+                    position: relative
+                    span
+                        background: #FFF2E9
+                    &::before
+                        position: absolute
+                        top: -65px
+                        left: 41%
+                        color: #E18370
+                        font-family: 'Gilroy-ExtraBold'
+                        font-size: 120px
+                        z-index: -1
+                .first
+                    &::before
+                        content: '1'
+                .second
+                    &::before
+                        content: '2'
+                .third
+                    &::before
+                        content: '3'
+                        
+                .op_body
+                    font-family: 'Gilroy-Regular'
+                    font-weight: normal
+                    font-size: 20px
+                    margin-top: 40px
+                    text-align: center
+    .opportunities_block
+        @include rwd(1100)
+            display: none
+        max-width: 1440px
+        width: 100%
+        justify-content: center
+        display: flex
+        .opportunities
+            display: flex
+            margin-top: 90px
+            width: 100%
+            justify-content: space-evenly
+            .opportunity
+                display: flex
+                flex-direction: column
+                max-width: 340px
+                min-height: 160px
+                margin: 0 10px 0 10px
+                .op_head
+                    font-family: 'Gilroy-ExtraBold'
+                    font-size: 20px
+                    text-align: left
+                    z-index: 999
+                    position: relative
+                    height: 73px
+                    span
+                        background: #FFF2E9
+                    &::before
+                        position: absolute
+                        top: -46px
+                        left: -47px
+                        color: #E18370
+                        font-family: 'Gilroy-ExtraBold'
+                        font-size: 70px
+                        z-index: -1
+                .first
+                    &::before
+                        content: '1'
+                .second
+                    &::before
+                        content: '2'
+                .third
+                    &::before
+                        content: '3'
+                        
+                .op_body
+                    font-family: 'Gilroy-Regular'
+                    font-weight: normal
+                    font-size: 20px
+                    text-align: left
+    .look
+        padding-top: 50px
+        font-family: 'Gilroy-ExtraBold'
+        @include rwd(1100)
+            display: none
+        .big    
+            font-size: 46px
+    #video_preview
+        max-width: 1142px
+        width: 100%
+        background: url('../img/vide_preview.png')
+        height: 641px
+        display: flex
+        justify-content: center
+        @include rwd(1100)
+            align-items: flex-start
+            margin-top: 100px
+        @include rwm(1100)
+            align-items: center
+            margin-top: 40px
+            border-radius: 30px
+        @include rwd(762)
+            height: 400px
+        .play_adapt
+            @include rwm(1100)
+                display: none
+            width: 160px
+            height: 160px
+            border-radius: 80px
+            background-color: #ffffff8c
+            position: relative
+            transform: translateY(-80px)
+            .small_circle
+                width: 110px
+                height: 110px
+                border-radius: 80px
+                background-color: white
+                position: absolute
+                top: 16%
+                left: 16%
+                .triangle
+                    position: absolute
+                    top: 25%
+                    left: 38%
+                    width: 40px
+                    height: 60px
+                    background: url('../img/play.svg')
+        .play_button_wrapper
+            display: flex
+            justify-content: center
+            align-items: center
+            position: relative
+            cursor: pointer
+            @include rwd(1100)
+               display: none
+            .big_circle
+                position: absolute
+                top: 0
+                left: 0
+                width: 160px
+                height: 160px
+                border-radius: 80px
+                background-color: #ECAFA4
+                opacity: 0.6
+                display: flex
+                justify-content: center
+                align-items: center
+                offset-path: path('M14.9996 8C15.0253 5.66667 13.6615 1 8.00141 1C2.21825 1 0.926269 5.66667 1.00317 8C0.97754 10.3333 2.3413 15 8.00141 15C13.6615 15 15.0253 10.3333 14.9996 8Z')
+                animation: rotation 3s linear infinite
+                offset-rotate: 0deg
+                transition: 0.2s
+                &:hover
+                    opacity: 1
+                @keyframes rotation
+                    100%
+                        offset-distance: 100%
+            .small_circle
+                position: absolute
+                top: 50%
+                left: 50%
+                width: 110px
+                height: 110px
+                border-radius: 80px
+                background-color: white
+                opacity: 0.6
+                offset-path: path('M9.99977 5.5C10.0163 4 9.13955 1 5.50091 1C1.78316 1 0.952602 4 1.00204 5.5C0.985561 7 1.86226 10 5.50091 10C9.13955 10 10.0163 7 9.99977 5.5Z')
+                animation: rotation-back 4s linear infinite
+                offset-rotate: 0deg;
+                transition: 0.2s
+                &:hover
+                    opacity: 1
+                @keyframes rotation-back
+                    0%
+                        offset-distance: 100%
+                    100%
+                        offset-distance: 0%
+            .triangle
+                position: absolute
+                top: 25%
+                left: 38%
+                width: 40px
+                height: 60px
+                background: url('../img/play.svg')
+    #player_wrap
+        max-width: 1142px
+        width: 100% 
+        height: 641px
+        border-radius: 30px
+        margin-top: 40px
+        overflow: hidden
+
+.members_wrap
+    background: #FFF2E9
+    padding: 50px 0 60px 0
+    display: flex
+    justify-content: center
+    .members_block
+        display: flex
+        justify-content: space-between
+        max-width: 1440px
+        width: 100%
+        @include rwd(1100)
+            flex-direction: column-reverse
+        .owl_carousel
+            @include rwd(1100)
+            @include rwm(1100)
+                width: 56%
+            flex-grow: 1 !important
+            img
+                width: 308px !important
+                height: 378px !important
+                transform: translateX(-159px)
+                border-radius: 30px
+                @include rwd(454)
+                    transform: translateX(-250px)
+                @include rwd(360)
+                    transform: translateX(-300px)
+                
+                
+        .for_whom_wrap
+            @include rwm(1100)
+                width: 44%
+                padding-left: 50px
+            .for_whom
+                display: flex
+                flex-direction: column
+                @include rwm(1100)
+                    max-width: 466px
+                @include rwd(1100)
+                    align-items: center
+            h1
+                font-family: 'Gilroy-ExtraBold'
+                font-size: 46px
+                margin: 0
+                @include rwd(1100)
+                    max-width: 250px
+                    text-align: center
+            h4
+                @include rwd(1100)
+                    display: none
+                font-family: 'Gilroy-Regular'
+                font-weight: normal
+                font-size: 18px
+                margin-top: 50px
+                margin-bottom: 0
+            .adapt_wrap
+                max-width: 270px
+                width: 100%
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+            h3  
+                @include rwm(1100)
+                    display: none
+                
+                align-self: flex-start
+                font-family: 'Gilroy-Regular'
+                font-weight: normal
+                font-size: 18px
+                margin-top: 50px
+                margin-bottom: 0
+                padding-left: 30px
+                position: relative
+                &::before
+                    content: url('../img/adapt_v_big.svg')
+                    position: absolute
+                    left: 10px
+                    top: 0
+                    width: 40px
+            .bb 
+                font-family: 'Gilroy-ExtraBold'
+                font-size: 22px
+            .button 
+                max-width: 200px
+                align-self: center
+                @include rwm(1100)
+                    margin-top: 49px
+                @include rwd(1100)
+                    transform: translateY(486px)
+            .lg
+                
+            
+.advantages_wrap
+    display: flex
+    padding: 100px
+    align-items: center
+    flex-direction: column
+    @include rwd(1163)
+        padding: 90px 30px 0 30px
+    .advantages
+        max-width: 1120px
+        width: 100%
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        .advantage
+            &:first-child
+                display: flex
+                flex-direction: column
+            @include rwm(1163)
+                width: 33.3%
+            @include rwd(1163)
+                width: 50%
+                display: flex
+            @include rwd(839)
+                width: 100%
+                display: flex
+            
+            margin-top: 30px
+            img
+                @include rwd(454)
+                    width: 74px
+            h1
+                font-family: 'Gilroy-ExtraBold'
+                font-size: 68px
+                margin: 0
+                @include rwd(454)
+                    font-size: 33px
+            h5 
+                font-family: 'Gilroy-ExtraBold'
+                font-size: 35.5px
+                margin: 0
+                @include rwd(454)
+                    font-size: 33px
+            h3
+                font-family: 'Gilroy-Regular'
+                font-size: 24px
+                font-weight: normal
+                margin-top: 10px
+                @include rwd(1163)
+                    padding-left: 20px
+                @include rwd(454)
+                    font-size: 18px
+
+            .bb
+                font-family: 'Gilroy-ExtraBold'
+    .button
+        margin-top: 40px
+        @include rwd(1163)
+            display: none
+
+.calendars_wrap
+    display: flex
+    flex-direction: column
+    align-items: center
+    br.h
+        @include rwm(454)
+            display: none
+    span.orange
+        @include rwd(454)
+            font-size: 38px !important
+            text-transform: uppercase
+    h1
+        font-family: 'Gilroy-ExtraBold'
+        font-size: 40px
+        text-align: center
+        margin-top: 0
+        margin-bottom: 40px
+        @include rwd(454)
+            font-size: 28px
+            margin-bottom: 10px
+            margin-top: 80px
+    .calendars
+        max-width: 1120px
+        width: 100%
+        display: flex
+        .swiper-container 
+            width: 100%
+            padding-top: 20px
+            padding-bottom: 50px
+        .left_wrap  
+            display: flex
+            align-items: center
+            padding: 10px
+            box-shadow: 0px 0px 18px 23px rgba(255,255,255,1);
+            z-index: 999
+            @include rwd(840)
+                display: none !important
+            
+        .swiper-slide-shadow-left
+            display: none
+        .swiper-slide-shadow-right
+            display: none
+        .current
+            opacity: 1 !important
+        .next
+            opacity: 0.7 !important
+        .next_next
+            opacity: 0.2 !important
+        .over
+            opacity: 0
+        .swiper-slide 
+            background-position: center
+            background-size: cover
+            width: 424px
+            height: 645px
+            @include rwd(454)
+                width: 280px 
+                height: 417px
+            border-radius: 30px 30px 0 0
+            background-color: white
+            overflow: hidden
+            box-shadow: 0px 3px 17px -1px rgba(225,131,112,1)
+            .day
+                @include rwd(840)
+                    padding-top: 0
+                @include rwd(454)
+                    height: 167px
+                background-color: #E18370
+                position: relative
+                padding: 50px 60px 40px 60px
+                @include rwd(454)
+                    padding: 20px 20px 20px 20px
+                box-shadow: 0px 3px 17px -1px rgba(225,131,112,1)
+                &::before
+                    content: url('../img/calendar_ham.svg')
+                    position: absolute
+                    top: 25px
+                    left: 25px
+                    @include rwd(454)
+                        content: url('../img/cal_hub_smol.svg')
+                        
+                .nav
+                    @include rwm(840)
+                        display: none
+                    width: 100%
+                    display: flex
+                    justify-content: space-between
+                    transform: translateY(100px)
+                    @include rwd(454)
+                        transform: translateY(25px)
+                    .left
+                        cursor: pointer
+                    .rot
+                        transform: rotate(180deg)
+                    .l
+                        img
+                            transform: translateX(20px)
+                            
+                .current_date
+                    @include rwd(454)
+                        transform: translateY(-64px)
+                    h1
+                        font-family: 'Gilroy-ExtraBold'
+                        font-size: 150px
+                        @include rwd(454)
+                            font-size: 80px
+                        color: white
+                        margin: 0
+                        text-align: center
+                        line-height: 126px
+                    h5
+                        font-family: 'Gilroy-ExtraBold'
+                        font-size: 36px
+                        @include rwd(454)
+                            font-size: 18px
+                            transform: translateY(-24px)
+                        color: white
+                        margin: 0
+                        text-align: center
+                
+                .current_event
+                    border-bottom: 2px solid #F0C1B7
+                    position: relative
+                    &::before
+                        content: url('../img/calendar_cortana.svg')
+                        position: absolute
+                        left: 0
+                        top: 5px
+                        @include rwd(454)
+                            top: 1px
+                            content: url('../img/cortana_smol.svg')
+                    h3
+                        font-family: 'Gilroy-Regular'
+                        font-weight: normal
+                        font-size: 26px
+                        color: white
+                        margin: 50px 0 5px 0
+                        text-align: center
+                        @include rwd(454)
+                            margin: -62px 0 5px 0
+                            font-size: 14px
+            .days
+                heigth: 50%
+                padding: 22px 42px 49px 42px 
+                .day_names
+                    display: flex
+                    font-family: 'Gilroy-Regular'
+                    font-weight: normal
+                    font-size: 14px
+                    padding-bottom: 15px
+                    justify-content: space-between
+                    border-bottom: 2px solid #E18370
+                    @include rwd(454)
+                        font-size: 10px
+                .days_row
+                    .day_row
+                        display: flex
+                        justify-content: space-between
+                        margin-top: 22px
+                        @include rwd(454)
+                            margin-top: 10px
+                        div
+                            text-align: center
+                            width: 16px
+                            height: 18px
+                            font-family: 'Gilroy-Regular'
+                            font-weight: normal
+                            font-size: 18px
+                            @include rwd(454)
+                                font-size: 10px
+                        .choosen_day
+                            position: relative
+                            &::before
+                                content: url('../img/choosen_day.svg')
+                                position: absolute
+                                top: -4px
+                                z-index: -1
+                                left: -8px
+                                @include rwd(454)
+                                    content: url('../img/shoosen_day_smol.svg')
+                                    top: -5px
+                                    left: -2px
+
+        .left
+            background: url('../img/slider_nav.svg')
+            width: 33px
+            height: 65px
+            transform: rotate(180deg)
+            outline: none
+            cursor: pointer
+        .right
+            background: url('../img/slider_nav.svg')
+            width: 33px
+            height: 65px
+            outline: none
+            cursor: pointer
+
+.requirements_wrap
+    display: flex
+    flex-direction: column
+    align-items: center
+    @include rwm(454)
+        margin-top: 180px
+    @include rwd(454)
+        margin-top: 80px
+    h1
+        font-family: 'Gilroy-ExtraBold'
+        font-size: 40px
+        margin-top: 0
+        @include rwd(454)
+            font-size: 25px
+            max-width: 300px
+            margin-bottom: 40px
+        text-align: center
+    .test
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        margin: 0px 66px
+        @include rwd(590)
+            margin: 0 6px
+    .requirements
+        @include rwd(982)
+            margin-top: 35px
+        max-width: 1244px
+        width: 100%
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+        .requirement
+            @include rwm(982)
+                width: 24%
+                height: 400px
+            @include rwd(982)
+                width: 50%
+                height: 308px
+            @include rwd(454)
+                height: 208px
+            display: flex
+            align-items: center
+            flex-direction: column
+            position: relative
+            &::before
+                @include rwd(982)
+                    font-family: 'Gilroy-ExtraBold'
+                    font-size: 120px
+                    opacity: 0.6
+                    color: #E18370
+                    position: absolute
+                    top: -28%
+                    left: 15%
+                @include rwd(454)
+                    font-size: 40px
+            img
+                @include rwd(454)
+                    width: 50px
+        .one
+            &::before
+                @include rwd(982)
+                    content: '1'
+        .two
+            &::before
+                @include rwd(982)
+                    content: '2'
+        .three
+            @include rwd(982)
+                img
+                    margin-left: -37px
+            &::before
+                @include rwd(982)
+                    content: '3'
+        .four
+            &::before
+                @include rwd(982)
+                    content: '4'
+            img
+                //@include rwd(982)
+                    //width: 20px
+                
+        .t15
+            margin-top: -15px
+        h4
+            font-family: 'Gilroy-ExtraBold'
+            font-size: 24px
+            margin-bottom: 10px
+            @include rwd(590)
+                font-size: 12px
+            
+        .h3_wrap    
+            h3
+                font-family: 'Gilroy-Regular'
+                font-weight: normal
+                font-size: 16px
+                margin: 0
+                @include rwd(590)
+                    font-size: 12px
+                
+    .dots_adapt
+        @include rwm(982)
+            display: none
+        
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        .dots_cluster
+            width: 17%
+            height: 10px
+            display: flex
+            justify-content: space-between
+            &:last-child
+                transform: translateY(392px)
+                @include rwd(454)
+                    transform: translateY(289px)
+                
+            &:first-child
+                transform: translateY(93px)
+            .circle
+                width: 10px
+                height: 10px
+                background: #E18370
+                border-radius: 5px
+
+    .dots
+        @include rwd(982)
+            display: none
+        max-width: 1244px
+        width: 100%
+        display: flex
+        justify-content: space-between
+        transform: translateY(55px)
+        .dots_cluster
+            width: 10%
+            height: 10px
+            display: flex
+            justify-content: space-between
+            .circle
+                width: 10px
+                height: 10px
+                background: #E18370
+                border-radius: 5px
+
+.costs_wrap
+    background-image: url('../img/costs_bcg.png');
+    background-repeat: repeat-x;
+    background-size: auto 41%;
+    display: flex
+    flex-direction: column
+    align-items: center
+    h1
+        font-family: 'Gilroy-ExtraBold'
+        text-align: center
+        color: white
+        font-size: 40px
+        margin-bottom: 0
+        @include rwd(454)
+            font-size: 18px
+            margin-top: 28px
+            margin-bottom: 17px
+        
+    h4
+        margin-top: 10px
+        font-family: 'Gilroy-Regular'
+        font-weight: normal
+        font-size: 18px
+        text-align: center
+        color: white
+        margin-bottom: 30px
+        @include rwd(454)
+            display: none
+
+    h4.orange
+        margin-top: 40px !important
+    .expences
+        max-width: 897px
+        width: 100%
+        flex-wrap: wrap
+        display: flex
+        @include rwm(1100)
+            justify-content: space-between
+        @include rwd(1100)
+            justify-content: center
+        .expence
+            max-width: 414px
+            width: 100%
+            max-height: 671px
+            overflow: hidden
+            background: white
+            border-radius: 30px 30px 0 0
+            box-shadow: 0px 3px 17px -1px #e18370
+            @include rwd(454)
+                border-radius: 10px 10px 0 0
+                max-width: 342px
+                max-height: 469px
+            &:last-child
+                @include rwd(828)
+                    margin-top: 25px
+
+            
+            .expence_head
+                height: 71px
+                background: #FFF2E9
+                display: flex
+                justify-content: center
+                box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75)
+                @include rwd(454)
+                    height: 31px
+                h3
+                    margin: 0
+                    padding: 0
+                    width: 100%
+                    text-align: center
+                    line-height: 71px
+                    font-family: 'Gilroy-ExtraBold'
+                    font-size: 36px
+                    max-width: 227px
+                    border-bottom: 2px solid #E18370
+                    @include rwd(454)
+                        font-size: 24px
+                        line-height: 31px
+                    
+            .price_wrap
+                padding: 0 50px 0 50px
+                h2
+                    text-align: center
+                    font-family: 'Gilroy-Regular'
+                    font-size: 36px
+                    font-weight: normal
+                    margin-bottom: 10px
+                    @include rwd(454)
+                        margin-top: 10px
+                    
+                h5
+                    text-align: left
+                    font-family: 'Gilroy-Regular'
+                    font-size: 16px
+                    font-weight: normal
+                    margin: 0
+                    @include rwd(454)
+                        font-size: 13px
+            hr
+                border-color: #E18370
+                max-width: 227px
+                width: 100%
+                margin-top: 33px
+                margin-bottom: 30px
+                @include rwd(454)
+                    margin-top: 15px
+                    margin-bottom: 14px
+
+            .ul_wrap_wrap
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                height: 413px
+            .ul_wrap
+                padding: 0 50px 0 50px
+                span
+                    font-family: 'Gilroy-Regular'
+                    font-size: 18px
+                    font-weight: normal
+                    @include rwd(454)
+                        font-size: 12px
+                    
+                ul
+                    font-family: 'Gilroy-Regular'
+                    font-size: 18px
+                    font-weight: normal
+                    padding: 0
+                    @include rwd(454)
+                        font-size: 12px
+                    li
+                        list-style-type: none
+                        margin-top: 8px
+                        &::before
+                            content: url('../img/li_circle.svg')
+                            padding-right: 10px
+            .btn_wrap
+                padding: 0 50px 0 50px
+                display: flex
+                justify-content: center
+                margin-bottom: 38px
+                .button
+                    font-weight: normal !important
+                    font-family: 'Gilroy-Regular'
+                    @include rwd(454)
+                        transform: translateY(-85px)
+                    
+
+.reports_wrap
+    display: flex
+    justify-content: center
+    padding: 100px 0 120px 0
+    .reports
+        max-width: 1122px
+        width: 100%
+        display: flex
+        position: relative
+        &::before
+            @include rwd(1100)
+                content: ''
+                width: 40%
+                height: 100%
+                background-color: #E18370
+                z-index: -1
+                position: absolute
+        .orange_block
+            width: 34%
+            background: #E18370
+            box-shadow: 0px 3px 17px -1px #e18370
+            height: 100%
+            display: flex
+            align-items: center
+            @include rwd(1100)
+                background: none !important
+                box-shadow: none
+                width: 30%
+            
+            @include rwd(590)
+                width: 32%
+                
+            h1
+                font-family: 'Gilroy-ExtraBold'
+                @include rwm(1100)
+                    font-size: 40px
+                @include rwd(1100)
+                    font-size: 25px
+                @include rwd(590)
+                    font-size: 18px
+                    padding: 7px
+                color: white
+                padding: 0 37px 0 37px
+        .blocks_wrap
+            display: flex
+            width: 66%
+            flex-wrap: wrap
+            h1
+                font-family: 'Gilroy-ExtraBold'
+                font-size: 24px
+                margin: 37px 0 0 20px
+                @include rwd(1100)
+                    margin: 20px 0 0 20px
+                @include rwd(705)
+                    font-size: 18px
+                    margin: 10px 0 0 10px
+                @include rwd(590)
+                    font-size: 10px
+                    margin: 5px 0 0 5px
+            h2  
+                font-family: 'Gilroy-Regular'
+                font-size: 18px
+                margin: 20px 0 0 20px
+                font-weight: normal
+                @include rwd(705)
+                    font-size: 16px
+                    margin: 0
+                    margin: 10px 0 0 10px
+                @include rwd(590)
+                    font-size: 10px
+                    margin: 5px 0 0 5px
+            .baikal
+                background-color: white
+                @include rwm(1100)
+                    width: 331px
+                    height: 261px
+                    margin: 0 10px 10px 20px
+                @include rwd(1100)
+                    width: 100%
+                    margin: 10px
+                    padding-bottom: 10px
+                    display: flex
+                    justify-content: space-between
+                
+                box-shadow: 0px 3px 17px -1px #e18370
+                display: flex
+                justify-content: space-between
+                a.df
+                    @include rwm(1100)
+                        display: none
+                    width: 100px
+                    height: 100px
+                    background: #FFF2E9
+                    border-radius: 100px
+                    box-shadow: 2px 7px 16px 0px rgba(225,131,112,0.45)
+                    position: relative
+                    margin: 27px 27px 0 0
+                    @include rwd(705)
+                        width: 70px
+                        height: 70px
+                        margin: 23px 23px 0 0
+                    @include rwd(590)
+                        width: 35px
+                        height: 35px
+                        margin: 17px 10px 0 0
+                    img
+                        position: absolute
+                        top: 25%
+                        left: 33%
+                        width: 40px
+                        @include rwd(705)
+                            width: 30px
+                        @include rwd(590)
+                            top: 31%
+                            left: 41%
+                            width: 11px
+
+                .play_wrap
+                    @include rwd(1100)
+                        display: none !important
+                    display: flex
+                    justify-content: center
+                    .play
+                        width: 82px
+                        cursor: pointer
+                        height: 82px
+                        background: #FFF2E9
+                        border-radius: 41px
+                        display: block
+                        position: relative
+                        transform: translateY(49px)
+                        box-shadow: 0px 3px 17px -1px #e18370
+                        transform: translate3d(-128px, 218px, 10px)
+                        img
+                            position: absolute
+                            top: 25%
+                            left: 37%
+                            width: 26px
+            .crimea
+                background-color: white
+                @include rwm(1100)
+                    width: 351px
+                    height: 258px
+                    margin: 0 10px 10px 10px
+                @include rwd(1100)
+                    width: 100%
+                    margin: 10px
+                    padding-bottom: 10px
+                    display: flex
+                    justify-content: space-between
+                
+                box-shadow: 0px 3px 17px -1px #e18370
+                display: flex
+                justify-content: space-between
+                a.df
+                    @include rwm(1100)
+                        display: none
+                    width: 100px
+                    height: 100px
+                    background: #FFF2E9
+                    border-radius: 100px
+                    box-shadow: 2px 7px 16px 0px rgba(225,131,112,0.45)
+                    position: relative
+                    margin: 27px 27px 0 0
+                    @include rwd(705)
+                        width: 70px
+                        height: 70px
+                        margin: 23px 23px 0 0
+                    @include rwd(590)
+                        width: 35px
+                        height: 35px
+                        margin: 17px 10px 0 0
+                    img
+                        position: absolute
+                        top: 25%
+                        left: 33%
+                        width: 40px
+                        @include rwd(705)
+                            width: 30px
+                        @include rwd(590)
+                            top: 31%
+                            left: 41%
+                            width: 11px
+                .play_wrap
+                    @include rwd(1100)
+                        display: none !important
+                    display: flex
+                    justify-content: center
+                    .play
+                        cursor: pointer
+                        width: 82px
+                        height: 82px
+                        background: #FFF2E9
+                        border-radius: 41px
+                        display: block
+                        position: relative
+                        transform: translateY(49px)
+                        box-shadow: 0px 3px 17px -1px #e18370
+                        transform: translate3d(-136px, 218px, 10px)
+                        img
+                            position: absolute
+                            top: 25%
+                            left: 37%
+                            width: 26px
+            .moscow
+                background-color: white
+                @include rwm(1100)
+                    width: 434px
+                    height: 198px
+                    margin: 40px 10px 0 20px
+                @include rwd(1100)
+                    width: 100%
+                    margin: 10px
+                    padding-bottom: 10px
+                    display: flex
+                    justify-content: space-between
+                
+                
+                box-shadow: 0px 3px 17px -1px #e18370
+                a.df
+                    @include rwm(1100)
+                        display: none
+                    width: 100px
+                    height: 100px
+                    background: #FFF2E9
+                    border-radius: 100px
+                    box-shadow: 2px 7px 16px 0px rgba(225,131,112,0.45)
+                    position: relative
+                    margin: 27px 27px 0 0
+                    @include rwd(705)
+                        width: 70px
+                        height: 70px
+                        margin: 23px 23px 0 0
+                    @include rwd(590)
+                        width: 35px
+                        height: 35px
+                        margin: 17px 10px 0 0
+                    img
+                        position: absolute
+                        top: 25%
+                        left: 33%
+                        width: 40px
+                        @include rwd(705)
+                            width: 30px
+                        @include rwd(590)
+                            top: 31%
+                            left: 41%
+                            width: 11px
+                .play_wrap
+                    @include rwd(1100)
+                        display: none !important
+                    display: flex
+                    align-items: center
+                    .play
+                        cursor: pointer
+                        width: 82px
+                        height: 82px
+                        background: #FFF2E9
+                        border-radius: 41px
+                        display: block
+                        position: relative
+                        transform: translateX(40px)
+                        box-shadow: 0px 3px 17px -1px #e18370
+                        transform: translate3d(397px, -112px, 10px)
+                        img
+                            position: absolute
+                            top: 25%
+                            left: 37%
+                            width: 26px
+
+.our_team_wrap
+    min-height: 508px
+    background: url('../img/team_bcg.png')
+    background-repeat: repeat-x
+    background-size: auto 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-direction: column
+    h1
+        font-family: 'Gilroy-ExtraBold'
+        text-align: center
+        font-size: 46px
+    .our_team_block
+        background-color: #fff
+        max-width: 1084px
+        min-height: 243px
+        width: 100%
+        box-shadow: 0px 3px 17px -1px #e18370
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        .tmt
+            @include rwd(819)
+                width: 50%
+                display: flex
+                flex-direction: column
+                align-items: center
+                margin-top: 20px
+            margin-top: -125px
+            h2
+                font-family: 'Gilroy-ExtraBold'        
+                font-size: 24px
+                text-align: center
+                @include rwd(819)
+                    margin-bottom: 10px
+                @include rwd(454)
+                    font-size: 18px
+                    margin-bottom: 0
+            h3
+                font-family: 'Gilroy-Regular'        
+                font-size: 18px
+                font-weight: normal
+                text-align: center
+                @include rwd(819)
+                    margin-top: 10px
+                @include rwd(454)
+                    font-size: 12px
+                    margin-top: 0
+            img
+                @include rwd(454)
+                    width: 150px
+
+
+.footer_wrap
+    background: #E18370
+    padding: 67px 0 67px 0
+    display: flex
+    justify-content: center
+    @include rwd(515)
+        padding: 37px 0 37px 0
+    .footer
+        max-width: 1122px
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        .logo
+            width: 143px !important
+            height: 44px !important
+            @include rwd(515)
+                width: 50%
+            
+        .socials_wrap
+            max-width: 380px
+            width: 100%
+            display: flex
+            justify-content: space-between
+            @include rwd(819)
+                max-width: 176px
+            @include rwd(515)
+                width: 50%
+        .law
+            @include rwd(515)
+                width: 100%
+                text-align: center
+            a
+                font-family: 'Gilroy-ExtraBold'
+                font-size: 12px
+                color: #FFF2E9
+                line-height: 30px
+                text-decoration: none
+
+//Regular classes
+.button
+    padding: 18px 30px
+    text-decoration: none
+    color: white
+    background: #E18370
+    font-family: 'Gilroy-ExtraBold'
+    font-size: 20px
+    text-align: center
+    border-radius: 30px
+
+.orange
+    color: #E18370
+
+.hidden
+    display: none !important
+
+.ert
+    transform: translateY(-14px);
+    border-bottom: 2px solid #fff2e9;
+
+.popup_bg
+    position: absolute
+    z-index: 1000
+    top: 0
+    left: 0
+    display: none
+    background-color: #000
+    opacity: 0.5
+
+.div_popup
+    position: fixed
+    z-index: 2000
+    margin-top: 10%
+    width: 300px
+    height: 300px
+    left: 50%
+    margin-left: -150px
+    display: none
+     
+    border: 3px solid #00FF00
+    background-color: #0000FF
+    
